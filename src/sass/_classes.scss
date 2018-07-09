@@ -1,0 +1,134 @@
+/**
+ * @name 	SLabelMaterialComponent
+ * This file provide the mixins and functions to create material label elements
+ */
+
+/**
+ * Print out the bare and style component css
+ * Generated classes:
+ * - ```[is="s-label-material"]```
+ * - ```[is="s-label-material"] > input```
+ * - ```[is="s-label-material"] > textarea```
+ * - ```[is="s-label-material"] > span```
+ * - ```[is="s-label-material"][color="{color}"] > input```
+ * - ```[is="s-label-material"][color="{color}"] > textarea```
+ * - ```[is="s-label-material"][color="{color}"] > span```
+ * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
+ */
+@mixin s-label-material-classes(
+	$colors : default primary secondary
+) {
+	@include s-label-material-classes-bare();
+	@include s-label-material-classes-style($colors);
+}
+
+/**
+ * Print out the bare component css
+ * Generated classes:
+ * - ```[is="s-label-material"]```
+ * - ```[is="s-label-material"] > input```
+ * - ```[is="s-label-material"] > textarea```
+ * - ```[is="s-label-material"] > span```
+ */
+@mixin s-label-material-classes-bare() {
+	@include s-component('s-label-material') {
+		[is="#{s-component()}"] {
+			position:relative;
+			display: block;
+
+			> input,
+			> textarea {
+				padding: s-lnf(padding-horizontal) 0;
+				width:100%;
+				font-size: 1em;
+				outline: none;
+				border: none;
+				@include s-transition(fast);
+			}
+			> input {
+				height: s-lnf(padding-horizontal) * 2 + 1em;
+			}
+			> span {
+				display:inline-block;
+				padding: s-lnf(padding-horizontal) 0;
+				line-height: 1.3;
+				font-size: 1em;
+				position:absolute;
+				top:0; left:0;
+				white-space: nowrap;
+				pointer-events: none;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				@include s-translate(0,0);
+				@include s-transition(fast);
+			}
+			> input[has-value] ~ span,
+			> input:focus ~ span,
+			> textarea[has-value] ~ span,
+			> textarea:focus ~ span {
+				font-size: s-lnf(padding-horizontal) * .8;
+				padding: 0;
+			}
+			> input[has-value],
+			> input:focus {
+				padding-top: s-lnf(padding-horizontal) * 1.33 !important;
+				padding-bottom: s-lnf(padding-horizontal) - s-lnf(padding-horizontal) / 3 !important;
+			}
+			> textarea[has-value],
+			> textarea:focus {
+				padding-top: 0 !important;
+				margin-top: s-lnf(padding-horizontal) + s-lnf(padding-horizontal) / 3 !important;
+				padding-bottom: s-lnf(padding-horizontal) - s-lnf(padding-horizontal) / 3 !important;
+			}
+		}
+	}
+}
+
+/**
+ * Print out the style component css
+ * Generated classes:
+ * - ```[is="s-label-material"]```
+ * - ```[is="s-label-material"] > input```
+ * - ```[is="s-label-material"] > textarea```
+ * - ```[is="s-label-material"][color="{color}"] > input```
+ * - ```[is="s-label-material"][color="{color}"] > textarea```
+ * - ```[is="s-label-material"][color="{color}"] > span```
+ * @param 	{List<Color>} 		[$color=default primary secondary] 		The colors to generate
+ */
+@mixin s-label-material-classes-style(
+	$colors : default primary secondary
+) {
+	@include s-component('s-label-material') {
+
+		[is="#{s-component()}"] {
+			> input,
+			> textarea {
+				border-bottom-width: 1px;
+				border-bottom-style: solid;
+				border-bottom-color: s-color(text);
+			}
+		}
+
+		@each $color in $colors {
+			$sel : '[is="#{s-component()}"][color="#{$color}"]';
+			@if $color == default {
+				$sel : '[is="#{s-component()}"]'
+			}
+			#{$sel} {
+				> input[has-value] ~ span,
+				> input:focus ~ span,
+				> textarea[has-value] ~ span,
+				> textarea:focus ~ span {
+					color : s-color($color);
+				}
+
+				> input[has-value],
+				> input:focus,
+				> textarea[has-value],
+				> textarea:focus {
+					border-bottom-color: s-color($color, -opacity .6);
+				}
+			}
+		}
+	}
+}
