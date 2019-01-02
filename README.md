@@ -29,6 +29,8 @@
 
 Provide a simple material design style label/input.
 
+  [![View demo](http://components.coffeekraken.io/assets/img/view-demo.png)](http://components.coffeekraken.io/app/s-label-material-component)
+
 ## Table of content
 
 1. **[Demo](http://components.coffeekraken.io/app/s-label-material-component)**
