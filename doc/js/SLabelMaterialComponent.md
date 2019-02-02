@@ -10,6 +10,6 @@ Provide a simple material design style label/input.
 	<span>Firstname</span>
 </label>
 ```
-Author : Olivier Bossel <olivier.bossel@gmail.com>
+Author : Olivier Bossel [olivier.bossel@gmail.com](mailto:olivier.bossel@gmail.com)
 
-Extends **SWebComponent**
+Extends **native**

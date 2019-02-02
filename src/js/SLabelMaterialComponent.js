@@ -1,4 +1,4 @@
-import SWebComponent from 'coffeekraken-sugar/js/core/SWebComponent'
+import native from 'coffeekraken-sugar/js/core/sNativeWebComponent'
 import 'coffeekraken-sugar/js/features/inputAdditionalAttributes'
 
 /**
@@ -12,5 +12,5 @@ import 'coffeekraken-sugar/js/features/inputAdditionalAttributes'
  *
  * @author		Olivier Bossel <olivier.bossel@gmail.com>
  */
-export default class SLabelMaterialComponent extends SWebComponent {
+export default class SLabelMaterialComponent extends native(window.HTMLLabelElement) {
 }
