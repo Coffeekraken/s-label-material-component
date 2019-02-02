@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _SWebComponent2 = require('coffeekraken-sugar/js/core/SWebComponent');
+var _sNativeWebComponent = require('coffeekraken-sugar/js/core/sNativeWebComponent');
 
-var _SWebComponent3 = _interopRequireDefault(_SWebComponent2);
+var _sNativeWebComponent2 = _interopRequireDefault(_sNativeWebComponent);
 
 require('coffeekraken-sugar/js/features/inputAdditionalAttributes');
 
@@ -29,8 +29,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  *
  * @author		Olivier Bossel <olivier.bossel@gmail.com>
  */
-var SLabelMaterialComponent = function (_SWebComponent) {
-  _inherits(SLabelMaterialComponent, _SWebComponent);
+var SLabelMaterialComponent = function (_native) {
+  _inherits(SLabelMaterialComponent, _native);
 
   function SLabelMaterialComponent() {
     _classCallCheck(this, SLabelMaterialComponent);
@@ -39,6 +39,6 @@ var SLabelMaterialComponent = function (_SWebComponent) {
   }
 
   return SLabelMaterialComponent;
-}(_SWebComponent3.default);
+}((0, _sNativeWebComponent2.default)(window.HTMLLabelElement));
 
 exports.default = SLabelMaterialComponent;

@@ -19,6 +19,7 @@ Generated classes:
 - ```[is="s-label-material"][color="{color}"] > span```
 
 
+#### Parameters
 Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $color  |  **{ List<Color> }**  |  The colors to generate  |  optional  |  default primary secondary
@@ -46,6 +47,7 @@ Generated classes:
 - ```[is="s-label-material"][color="{color}"] > span```
 
 
+#### Parameters
 Name  |  Type  |  Description  |  Status  |  Default
 ------------  |  ------------  |  ------------  |  ------------  |  ------------
 $color  |  **{ List<Color> }**  |  The colors to generate  |  optional  |  default primary secondary

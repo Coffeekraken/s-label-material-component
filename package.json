@@ -1,6 +1,6 @@
 {
   "name": "coffeekraken-s-label-material-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Provide a simple material design style label/input.",
   "main": "dist/index.js",
   "homepage": "http://coffeekraken.io",
