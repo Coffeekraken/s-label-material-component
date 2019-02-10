@@ -105,7 +105,6 @@
 			> textarea {
 				border-bottom-width: 1px;
 				border-bottom-style: solid;
-				border-bottom-color: s-color(text);
 			}
 		}
 
@@ -115,6 +114,12 @@
 				$sel : '[is="#{s-component()}"]'
 			}
 			#{$sel} {
+
+				> input,
+				> textarea {
+					border-bottom-color: s-color($color, -opacity .2);
+				}
+
 				> input[has-value] ~ span,
 				> input:focus ~ span,
 				> textarea[has-value] ~ span,
