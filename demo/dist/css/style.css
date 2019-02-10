@@ -5551,6 +5551,7 @@ body {
 [is="s-label-material"] > input,
 [is="s-label-material"] > textarea {
   padding: 0.8em 0;
+  border-radius: 0em;
   width: 100%;
   font-size: 1em;
   outline: none;
@@ -5605,7 +5606,11 @@ body {
 [is="s-label-material"] > textarea {
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: #848e91;
+}
+
+[is="s-label-material"] > input,
+[is="s-label-material"] > textarea {
+  border-bottom-color: rgba(132, 142, 145, 0.2);
 }
 
 [is="s-label-material"] > input[has-value] ~ span,
@@ -5622,6 +5627,11 @@ body {
   border-bottom-color: rgba(132, 142, 145, 0.6);
 }
 
+[is="s-label-material"][color="primary"] > input,
+[is="s-label-material"][color="primary"] > textarea {
+  border-bottom-color: rgba(242, 188, 43, 0.2);
+}
+
 [is="s-label-material"][color="primary"] > input[has-value] ~ span,
 [is="s-label-material"][color="primary"] > input:focus ~ span,
 [is="s-label-material"][color="primary"] > textarea[has-value] ~ span,
@@ -5634,6 +5644,11 @@ body {
 [is="s-label-material"][color="primary"] > textarea[has-value],
 [is="s-label-material"][color="primary"] > textarea:focus {
   border-bottom-color: rgba(242, 188, 43, 0.6);
+}
+
+[is="s-label-material"][color="secondary"] > input,
+[is="s-label-material"][color="secondary"] > textarea {
+  border-bottom-color: rgba(43, 52, 56, 0.2);
 }
 
 [is="s-label-material"][color="secondary"] > input[has-value] ~ span,
@@ -5650,6 +5665,11 @@ body {
   border-bottom-color: rgba(43, 52, 56, 0.6);
 }
 
+[is="s-label-material"][color="success"] > input,
+[is="s-label-material"][color="success"] > textarea {
+  border-bottom-color: rgba(92, 184, 92, 0.2);
+}
+
 [is="s-label-material"][color="success"] > input[has-value] ~ span,
 [is="s-label-material"][color="success"] > input:focus ~ span,
 [is="s-label-material"][color="success"] > textarea[has-value] ~ span,
@@ -5662,6 +5682,11 @@ body {
 [is="s-label-material"][color="success"] > textarea[has-value],
 [is="s-label-material"][color="success"] > textarea:focus {
   border-bottom-color: rgba(92, 184, 92, 0.6);
+}
+
+[is="s-label-material"][color="error"] > input,
+[is="s-label-material"][color="error"] > textarea {
+  border-bottom-color: rgba(217, 83, 79, 0.2);
 }
 
 [is="s-label-material"][color="error"] > input[has-value] ~ span,
@@ -5678,6 +5703,11 @@ body {
   border-bottom-color: rgba(217, 83, 79, 0.6);
 }
 
+[is="s-label-material"][color="warning"] > input,
+[is="s-label-material"][color="warning"] > textarea {
+  border-bottom-color: rgba(240, 173, 78, 0.2);
+}
+
 [is="s-label-material"][color="warning"] > input[has-value] ~ span,
 [is="s-label-material"][color="warning"] > input:focus ~ span,
 [is="s-label-material"][color="warning"] > textarea[has-value] ~ span,
@@ -5690,6 +5720,11 @@ body {
 [is="s-label-material"][color="warning"] > textarea[has-value],
 [is="s-label-material"][color="warning"] > textarea:focus {
   border-bottom-color: rgba(240, 173, 78, 0.6);
+}
+
+[is="s-label-material"][color="info"] > input,
+[is="s-label-material"][color="info"] > textarea {
+  border-bottom-color: rgba(33, 153, 232, 0.2);
 }
 
 [is="s-label-material"][color="info"] > input[has-value] ~ span,
